@@ -1,0 +1,17 @@
+{
+  "name": "angular-kachelei",
+  "version": "0.0.0",
+  "description": "tile-layouts for angular",
+  "homepage": "https://github.com/Xiphe/angular-kachelei",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "Hannes Diercks <kachelei@xiphe.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-angular-toolbox": "0.0.8",
+    "grunt-cli": "^0.1.13"
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"extends": "../../.jshintrc",
+	"jasmine": true,
+	"predef": [
+		"module",
+		"inject",
+		"initGlobals",
+		"createDirective",
+		"$rootScope",
+		"$compile",
+		"$injector",
+		"$httpBackend",
+		"$q",
+		"$controller"
+	]
+}

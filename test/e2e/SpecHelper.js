@@ -11,5 +11,23 @@ exports.kachelei = {
   },
   kacheln: function() {
     return element.all(by.css('[kachel]'));
+  },
+  manipulateButtons: function() {
+    return element.all(by.css('[test-manipulation]'));
+  }
+};
+
+exports.thingsStringInput = {
+  set: function(string) {
+    exports.thingsStringInput.getElm().clear().sendKeys(string);
+  },
+  getElm: function() {
+    return element(by.model('thingsString'));
+  }
+};
+
+exports.times = function(count, cb) {
+  for (var i = 0; i < count; i++) {
+    cb();
   }
 };

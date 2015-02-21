@@ -62,4 +62,13 @@ angular.module('demoApp', ['kachelei']).run(function($rootScope) {
   ratio: 1,
   maxWidth: 250,
   gap: 20
+}).directive('testManipulation', function() {
+  return {
+    restrict: 'A',
+    controller: function($scope, $element) {
+      $scope.manipulate = function() {
+        $element.text(Math.random());
+      };
+    }
+  };
 });

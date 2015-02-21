@@ -9,7 +9,8 @@ module.exports = function(grunt) {
         src: {
           less: []
         }
-      }
+      },
+      jshintrc: true
     }
     /* project specific configuration here */
   });

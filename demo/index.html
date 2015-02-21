@@ -6,11 +6,12 @@
   <!-- [[src/less]] -->
   <link rel="stylesheet" type="text/css" href="demo/style.css">
 </head>
-<body>
-  <div ng-cloak ng-app="demoApp" kachelei>
-  	<div kachel ng-repeat="thing in things" kx="thing.x" ky="thing.y">
-  		<h3>{{thing.headline}}</h3>
-  	</div>
+<body ng-cloak ng-app="demoApp">
+  <input ng-model="thingsString" />
+  <div  kachelei>
+    <div kachel ng-repeat="thing in things" kx="thing.x" ky="thing.y">
+      <h3>{{thing.headline}}</h3>
+    </div>
   </div>
   <!-- [[src/js]] -->
   <script type="text/javascript" src="demo/demoApp.js"></script>

@@ -1,4 +1,4 @@
-/* global app, angular */
+/* global app */
 app.directive('kachelei', function(
     kDebounce,
     kRect,
@@ -17,6 +17,11 @@ app.directive('kachelei', function(
 
       this.add = function(kachel) {
         kacheln.push(kachel);
+        debouncedLayout();
+      };
+
+      this.remove = function(kachel) {
+        kacheln.splice(kacheln.indexOf(kachel), 1);
         debouncedLayout();
       };
 

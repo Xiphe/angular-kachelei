@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My angular demo</title>
+  <!-- [[src/less]] -->
+  <link rel="stylesheet" type="text/css" href="demo/style.css">
+  <!-- [[src/js]] -->
+  <script type="text/javascript" src="demo/demoApp.js"></script>
+</head>
+<body ng-cloak ng-app="demoApp">
+  <input ng-model="thingsString" />
+  <div  kachelei>
+    <div kachel ng-repeat="thing in things" kx="thing.x" ky="thing.y">
+      <h3>{{thing.headline}}</h3>
+    </div>
+  </div>
+</body>
+</html>

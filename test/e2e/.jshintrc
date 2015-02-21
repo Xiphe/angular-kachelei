@@ -1,0 +1,11 @@
+{
+	"extends": "../../.jshintrc",
+	"node": true,
+	"jasmine": true,
+	"predef": [
+		"protractor",
+		"browser",
+		"element",
+		"by"
+	]
+}

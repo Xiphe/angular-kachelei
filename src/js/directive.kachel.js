@@ -8,6 +8,10 @@ app.directive('kachel', function() {
     },
     require: '^kachelei',
     link: function(scope, element, attrs, kachelei) {
+      if (!attrs.ngRepeat) {
+        throw new Error('kachel directive has to be on same element as ng-repeat');
+      }
+
       element.css({
         position: 'absolute'
       });
@@ -20,7 +24,7 @@ app.directive('kachel', function() {
         }
       };
 
-      kachelei.add(kachel);
+      kachelei.add(kachel, scope.$parent.$index);
       scope.$on('$destroy', function() {
         kachelei.remove(kachel);
       });

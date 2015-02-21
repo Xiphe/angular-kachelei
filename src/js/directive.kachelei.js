@@ -15,8 +15,8 @@ app.directive('kachelei', function(
         position: 'relative'
       });
 
-      this.add = function(kachel) {
-        kacheln.push(kachel);
+      this.add = function(kachel, position) {
+        kacheln.splice(position, 0, kachel);
         debouncedLayout();
       };
 

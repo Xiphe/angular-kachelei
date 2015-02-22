@@ -2,6 +2,7 @@ angular-kachelei
 ================
 
 [![Build Status](https://travis-ci.org/Xiphe/angular-kachelei.svg)](https://travis-ci.org/Xiphe/angular-kachelei)
+[![Coverage Status](https://coveralls.io/repos/Xiphe/angular-kachelei/badge.svg)](https://coveralls.io/r/Xiphe/angular-kachelei)
 
 Kachelei [ˈkaχlaɪ] - a place where tiles are produced
 

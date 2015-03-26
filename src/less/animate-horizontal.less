@@ -1,0 +1,61 @@
+[kachelei].k-animate-in-left,
+[kachelei].k-animate-in-right {
+	[kachel] {
+		&.ng-enter {
+			-webkit-transition-property: transform;
+		}
+	}
+}
+[kachelei].k-animate-in-left {
+	[kachel] {
+		&.ng-enter {
+			-webkit-transform: translateX(-2000px);
+		}
+
+		&.ng-enter-active {
+			-webkit-transform: translateX(0);
+		}
+	}
+}
+[kachelei].k-animate-in-right {
+	[kachel] {
+		&.ng-enter {
+			-webkit-transform: translateX(2000px);
+		}
+
+		&.ng-enter-active {
+			-webkit-transform: translateX(0);
+		}
+	}
+}
+
+[kachelei].k-animate-out-left,
+[kachelei].k-animate-out-right {
+	[kachel] {
+		&.ng-leave {
+			-webkit-transition-property: transform;
+		}
+	}
+}
+[kachelei].k-animate-out-left {
+	[kachel] {
+		&.ng-leave {
+			-webkit-transform: translateX(0);
+		}
+
+		&.ng-leave-active {
+			-webkit-transform: translateX(-2000px);
+		}
+	}
+}
+[kachelei].k-animate-out-right {
+	[kachel] {
+		&.ng-leave {
+			-webkit-transform: translateX(0);
+		}
+
+		&.ng-leave-active {
+			-webkit-transform: translateX(2000px);
+		}
+	}
+}

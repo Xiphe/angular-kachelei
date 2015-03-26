@@ -8,7 +8,7 @@
 </head>
 <body ng-cloak ng-app="demoApp">
   <input ng-model="thingsString" />
-  <div kachelei class="k-animate-out-scale-down k-animate-in-scale-down k-animate-stagger">
+  <div kachelei class="k-animate-out-top k-animate-in-bottom k-animate-stagger">
     <div kachel ng-repeat="thing in things" kx="thing.x" ky="thing.y">
       <h3>{{thing.headline}}</h3>
     </div>

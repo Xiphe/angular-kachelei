@@ -6,8 +6,12 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     'angular-toolbox': {
       files: {
-        src: {
-          less: []
+        vendor: {
+          js: {
+            angularModules: [
+              'bower_components/angular-animate/angular-animate.js'
+            ]
+          }
         }
       },
       jshintrc: true

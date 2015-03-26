@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "tile-layouts for angular",
   "homepage": "https://github.com/Xiphe/angular-kachelei",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Xiphe/angular-kachelei.git"
+  },
   "main": "Gruntfile.js",
   "scripts": {
     "test": "grunt test"

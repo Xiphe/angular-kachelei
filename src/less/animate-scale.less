@@ -1,23 +1,69 @@
-[kachelei].k-animate-scale {
+[kachelei].k-animate-in-scale-up,
+[kachelei].k-animate-in-scale-down {
 	[kachel] {
-		&.ng-leave,
 		&.ng-enter {
+			opacity: 0;
 			-webkit-transition-property: transform, opacity;
 		}
-
-		&.ng-enter,
-		&.ng-leave.ng-leave-active {
-			opacity: 0;
+		&.ng-enter-active {
+			opacity: 1;
+		}
+	}
+}
+[kachelei].k-animate-in-scale-up {
+	[kachel] {
+		&.ng-enter {
 			-webkit-transform: scale(0);
 		}
-		&.ng-leave.ng-leave-active {
+
+		&.ng-enter-active {
+			-webkit-transform: scale(1);
+		}
+	}
+}
+[kachelei].k-animate-in-scale-down {
+	[kachel] {
+		&.ng-enter {
 			-webkit-transform: scale(2);
 		}
 
-		&.ng-leave,
-		&.ng-enter.ng-enter-active {
-			opacity: 1;
+		&.ng-enter-active {
 			-webkit-transform: scale(1);
+		}
+	}
+}
+
+[kachelei].k-animate-out-scale-up,
+[kachelei].k-animate-out-scale-down {
+	[kachel] {
+		&.ng-leave {
+			opacity: 1;
+			-webkit-transition-property: transform, opacity;
+		}
+		&.ng-leave-active {
+			opacity: 0;
+		}
+	}
+}
+[kachelei].k-animate-out-scale-up {
+	[kachel] {
+		&.ng-leave {
+			-webkit-transform: scale(1);
+		}
+
+		&.ng-leave-active {
+			-webkit-transform: scale(2);
+		}
+	}
+}
+[kachelei].k-animate-out-scale-down {
+	[kachel] {
+		&.ng-leave {
+			-webkit-transform: scale(1);
+		}
+
+		&.ng-leave-active {
+			-webkit-transform: scale(0);
 		}
 	}
 }

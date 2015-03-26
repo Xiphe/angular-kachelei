@@ -9,7 +9,8 @@
   },
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "install": "bower install"
   },
   "author": "Hannes Diercks <kachelei@xiphe.net>",
   "license": "MIT",

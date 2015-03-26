@@ -42,3 +42,40 @@
 		}
 	}
 }
+
+[kachelei].k-animate-stagger,
+[kachelei].k-animate-stagger-medium {
+	[kachel] {
+		&.ng-leave-stagger,
+		&.ng-enter-stagger {
+			-webkit-transition-delay: 100ms;
+			transition-delay: 100ms;
+			-webkit-transition-duration: 0s;
+			transition-duration: 0s;
+		}
+	}
+}
+
+[kachelei].k-animate-stagger-fast {
+	[kachel] {
+		&.ng-leave-stagger,
+		&.ng-enter-stagger {
+			-webkit-transition-delay: 30ms;
+			transition-delay: 30ms;
+			-webkit-transition-duration: 0s;
+			transition-duration: 0s;
+		}
+	}
+}
+
+[kachelei].k-animate-stagger-slow {
+	[kachel] {
+		&.ng-leave-stagger,
+		&.ng-enter-stagger {
+			-webkit-transition-delay: 150ms;
+			transition-delay: 150ms;
+			-webkit-transition-duration: 0s;
+			transition-duration: 0s;
+		}
+	}
+}

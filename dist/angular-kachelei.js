@@ -30,6 +30,10 @@
       },
       require: '^kachelei',
       link: function(scope, element, attrs, kachelei) {
+        if (!attrs.ngRepeat) {
+          throw new Error('kachel directive has to be on same element as ng-repeat');
+        }
+
         element.css({
           position: 'absolute'
         });
@@ -42,7 +46,7 @@
           }
         };
 
-        kachelei.add(kachel);
+        kachelei.add(kachel, scope.$parent.$index);
         scope.$on('$destroy', function() {
           kachelei.remove(kachel);
         });
@@ -67,8 +71,13 @@
           position: 'relative'
         });
 
-        this.add = function(kachel) {
-          kacheln.push(kachel);
+        this.add = function(kachel, position) {
+          kacheln.splice(position, 0, kachel);
+          debouncedLayout();
+        };
+
+        this.remove = function(kachel) {
+          kacheln.splice(kacheln.indexOf(kachel), 1);
           debouncedLayout();
         };
 

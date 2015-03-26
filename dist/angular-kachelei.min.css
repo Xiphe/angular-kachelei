@@ -1,0 +1,171 @@
+/*! angular-kachelei v0.0.0 */
+[kachelei] [kachel],
+[kachelei].k-animate-duration-medium [kachel] {
+  -webkit-transition-timing-function: cubic-bezier(0.555, 0.225, 0.12, 1.135);
+  transition-timing-function: cubic-bezier(0.555, 0.225, 0.12, 1.135);
+  -webkit-transition-duration: 400ms;
+  -webkit-transition-property: top, left;
+  -webkit-transition-delay: 300ms;
+}
+[kachelei] [kachel].ng-enter,
+[kachelei].k-animate-duration-medium [kachel].ng-enter {
+  -webkit-transition-delay: 500ms;
+}
+[kachelei] [kachel].ng-leave,
+[kachelei].k-animate-duration-medium [kachel].ng-leave {
+  -webkit-transition-delay: 0;
+}
+[kachelei].k-animate-duration-fast [kachel] {
+  -webkit-transition-duration: 200ms;
+  -webkit-transition-property: top, left;
+  -webkit-transition-delay: 150ms;
+}
+[kachelei].k-animate-duration-fast [kachel].ng-enter {
+  -webkit-transition-delay: 280ms;
+}
+[kachelei].k-animate-duration-fast [kachel].ng-leave {
+  -webkit-transition-delay: 0;
+}
+[kachelei].k-animate-duration-slow [kachel] {
+  -webkit-transition-duration: 600ms;
+  -webkit-transition-property: top, left;
+  -webkit-transition-delay: 500ms;
+}
+[kachelei].k-animate-duration-slow [kachel].ng-enter {
+  -webkit-transition-delay: 800ms;
+}
+[kachelei].k-animate-duration-slow [kachel].ng-leave {
+  -webkit-transition-delay: 0;
+}
+[kachelei].k-animate-stagger [kachel].ng-leave-stagger,
+[kachelei].k-animate-stagger-medium [kachel].ng-leave-stagger,
+[kachelei].k-animate-stagger [kachel].ng-enter-stagger,
+[kachelei].k-animate-stagger-medium [kachel].ng-enter-stagger {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+[kachelei].k-animate-stagger-fast [kachel].ng-leave-stagger,
+[kachelei].k-animate-stagger-fast [kachel].ng-enter-stagger {
+  -webkit-transition-delay: 30ms;
+  transition-delay: 30ms;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+[kachelei].k-animate-stagger-slow [kachel].ng-leave-stagger,
+[kachelei].k-animate-stagger-slow [kachel].ng-enter-stagger {
+  -webkit-transition-delay: 150ms;
+  transition-delay: 150ms;
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+[kachelei].k-animate-in-left [kachel].ng-enter,
+[kachelei].k-animate-in-right [kachel].ng-enter {
+  -webkit-transition-property: transform;
+}
+[kachelei].k-animate-in-left [kachel].ng-enter {
+  -webkit-transform: translateX(-2000px);
+}
+[kachelei].k-animate-in-left [kachel].ng-enter-active {
+  -webkit-transform: translateX(0);
+}
+[kachelei].k-animate-in-right [kachel].ng-enter {
+  -webkit-transform: translateX(2000px);
+}
+[kachelei].k-animate-in-right [kachel].ng-enter-active {
+  -webkit-transform: translateX(0);
+}
+[kachelei].k-animate-out-left [kachel].ng-leave,
+[kachelei].k-animate-out-right [kachel].ng-leave {
+  -webkit-transition-property: transform;
+}
+[kachelei].k-animate-out-left [kachel].ng-leave {
+  -webkit-transform: translateX(0);
+}
+[kachelei].k-animate-out-left [kachel].ng-leave-active {
+  -webkit-transform: translateX(-2000px);
+}
+[kachelei].k-animate-out-right [kachel].ng-leave {
+  -webkit-transform: translateX(0);
+}
+[kachelei].k-animate-out-right [kachel].ng-leave-active {
+  -webkit-transform: translateX(2000px);
+}
+
+[kachelei].k-animate-in-scale-up [kachel].ng-enter,
+[kachelei].k-animate-in-scale-down [kachel].ng-enter {
+  opacity: 0;
+  -webkit-transition-property: transform, opacity;
+}
+[kachelei].k-animate-in-scale-up [kachel].ng-enter-active,
+[kachelei].k-animate-in-scale-down [kachel].ng-enter-active {
+  opacity: 1;
+}
+[kachelei].k-animate-in-scale-up [kachel].ng-enter {
+  -webkit-transform: scale(0);
+}
+[kachelei].k-animate-in-scale-up [kachel].ng-enter-active {
+  -webkit-transform: scale(1);
+}
+[kachelei].k-animate-in-scale-down [kachel].ng-enter {
+  -webkit-transform: scale(2);
+}
+[kachelei].k-animate-in-scale-down [kachel].ng-enter-active {
+  -webkit-transform: scale(1);
+}
+[kachelei].k-animate-out-scale-up [kachel].ng-leave,
+[kachelei].k-animate-out-scale-down [kachel].ng-leave {
+  opacity: 1;
+  -webkit-transition-property: transform, opacity;
+}
+[kachelei].k-animate-out-scale-up [kachel].ng-leave-active,
+[kachelei].k-animate-out-scale-down [kachel].ng-leave-active {
+  opacity: 0;
+}
+[kachelei].k-animate-out-scale-up [kachel].ng-leave {
+  -webkit-transform: scale(1);
+}
+[kachelei].k-animate-out-scale-up [kachel].ng-leave-active {
+  -webkit-transform: scale(2);
+}
+[kachelei].k-animate-out-scale-down [kachel].ng-leave {
+  -webkit-transform: scale(1);
+}
+[kachelei].k-animate-out-scale-down [kachel].ng-leave-active {
+  -webkit-transform: scale(0);
+}
+
+[kachelei].k-animate-in-top [kachel].ng-enter,
+[kachelei].k-animate-in-bottom [kachel].ng-enter {
+  -webkit-transition-property: transform;
+}
+[kachelei].k-animate-in-top [kachel].ng-enter {
+  -webkit-transform: translateY(-2000px);
+}
+[kachelei].k-animate-in-top [kachel].ng-enter-active {
+  -webkit-transform: translateY(0);
+}
+[kachelei].k-animate-in-bottom [kachel].ng-enter {
+  -webkit-transform: translateY(2000px);
+}
+[kachelei].k-animate-in-bottom [kachel].ng-enter-active {
+  -webkit-transform: translateY(0);
+}
+[kachelei].k-animate-out-top [kachel].ng-leave,
+[kachelei].k-animate-out-bottom [kachel].ng-leave {
+  -webkit-transition-property: transform;
+}
+[kachelei].k-animate-out-top [kachel].ng-leave {
+  -webkit-transform: translateY(0);
+}
+[kachelei].k-animate-out-top [kachel].ng-leave-active {
+  -webkit-transform: translateY(-2000px);
+}
+[kachelei].k-animate-out-bottom [kachel].ng-leave {
+  -webkit-transform: translateY(0);
+}
+[kachelei].k-animate-out-bottom [kachel].ng-leave-active {
+  -webkit-transform: translateY(2000px);
+}

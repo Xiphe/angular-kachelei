@@ -1,0 +1,29 @@
+{
+  "name": "angular-kachelei",
+  "version": "0.0.0",
+  "authors": [
+    "Hannes Diercks <github@xiphe.net>"
+  ],
+  "description": "tile-layouts for angular",
+  "main": "dist/angular-kachelei.js",
+  "keywords": [
+    "tile",
+    "layout",
+    "directive",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "demo",
+    "src",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13"
+  }
+}

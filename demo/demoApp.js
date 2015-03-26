@@ -1,4 +1,4 @@
-angular.module('demoApp', ['kachelei']).run(function($rootScope) {
+angular.module('demoApp', ['kachelei', 'ngAnimate']).run(function($rootScope) {
   'use strict';
 
   var things = {

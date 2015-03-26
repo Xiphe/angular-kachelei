@@ -1,0 +1,44 @@
+[kachelei],
+[kachelei].k-animate-duration-medium {
+	[kachel] {
+		-webkit-transition-timing-function: cubic-bezier(0.555, 0.225, 0.120, 1.135);
+	    transition-timing-function: cubic-bezier(0.555, 0.225, 0.120, 1.135);
+		-webkit-transition-duration: 400ms;
+		-webkit-transition-property: top, left;
+	    -webkit-transition-delay: 300ms;
+		&.ng-enter {
+			-webkit-transition-delay: 500ms;
+		}
+		&.ng-leave {
+			-webkit-transition-delay: 0;
+		}
+	}
+}
+
+[kachelei].k-animate-duration-fast {
+	[kachel] {
+		-webkit-transition-duration: 200ms;
+		-webkit-transition-property: top, left;
+	    -webkit-transition-delay: 150ms;
+		&.ng-enter {
+			-webkit-transition-delay: 280ms;
+		}
+		&.ng-leave {
+			-webkit-transition-delay: 0;
+		}
+	}
+}
+
+[kachelei].k-animate-duration-slow {
+	[kachel] {
+		-webkit-transition-duration: 600ms;
+		-webkit-transition-property: top, left;
+	    -webkit-transition-delay: 500ms;
+		&.ng-enter {
+			-webkit-transition-delay: 800ms;
+		}
+		&.ng-leave {
+			-webkit-transition-delay: 0;
+		}
+	}
+}

@@ -1,5 +1,7 @@
 /* global app */
 app.factory('kRect', function() {
+  'use strict';
+
   return function(element) {
     var rect = {};
     var originalRect = element.getBoundingClientRect();

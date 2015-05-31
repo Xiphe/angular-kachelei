@@ -6,6 +6,9 @@ app.directive('kachelei', function(
     kachelConfig,
     $window
   ) {
+
+  'use strict';
+
   return {
     restrict: 'A',
     controller: function($scope, $element) {
@@ -29,8 +32,10 @@ app.directive('kachelei', function(
         var count = 1;
 
         /* how much kacheln fit the container? */
-        while ((kachelConfig.maxWidth * count + kachelConfig.gap * (count - 1)) < containerWidth) {
-          count++;
+        while (kachelConfig.maxWidth * count + kachelConfig.gap * (count - 1) <
+          containerWidth
+        ) {
+          count += 1;
         }
 
         return count;
@@ -66,7 +71,8 @@ app.directive('kachelei', function(
           kPlacer.mark(matrix, place[0], place[1], width, height, count);
 
           var widthPx = width * size + (width - 1) * gap;
-          var heightPx = height * size * kachelConfig.ratio + (height - 1) * gap;
+          var heightPx = height * size * kachelConfig.ratio +
+            (height - 1) * gap;
           var x = place[0] * size;
           if (place[0] > 0) {
             x += place[0] * gap;

@@ -1,10 +1,13 @@
-/* global app */
+/* global app, window */
 // http://davidwalsh.name/function-debounce
 app.factory('kDebounce', function() {
+  'use strict';
+
   return function(func, wait, immediate) {
     var timeout;
     return function() {
-      var context = this, args = arguments;
+      var context = this;
+      var args = arguments;
       var later = function() {
         timeout = null;
         if (!immediate) {
@@ -12,8 +15,8 @@ app.factory('kDebounce', function() {
         }
       };
       var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
+      window.clearTimeout(timeout);
+      timeout = window.setTimeout(later, wait);
       if (callNow) {
         func.apply(context, args);
       }

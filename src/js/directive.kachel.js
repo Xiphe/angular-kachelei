@@ -1,5 +1,7 @@
 /* global app */
 app.directive('kachel', function() {
+  'use strict';
+
   return {
     restrict: 'A',
     scope: {
@@ -9,7 +11,9 @@ app.directive('kachel', function() {
     require: '^kachelei',
     link: function(scope, element, attrs, kachelei) {
       if (!attrs.ngRepeat) {
-        throw new Error('kachel directive has to be on same element as ng-repeat');
+        throw new Error(
+          'kachel directive has to be on same element as ng-repeat'
+        );
       }
 
       element.css({

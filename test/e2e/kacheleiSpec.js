@@ -1,4 +1,6 @@
 describe('kachelei', function() {
+  'use strict';
+
   var specHelper = require('./SpecHelper');
   var kachelei = specHelper.kachelei;
 
@@ -19,25 +21,30 @@ describe('kachelei', function() {
       expect(kachelei.kacheln().count()).toBe(7);
     });
 
-    it('should keep existing elements present while removing others', function() {
-      var secondButton = kachelei.manipulateButtons().get(1);
-      var manipulation;
+    it(
+      'should keep existing elements present while removing others',
+      function() {
+        var secondButton = kachelei.manipulateButtons().get(1);
+        var manipulation;
 
-      secondButton.click();
+        secondButton.click();
 
-      manipulation = secondButton.getText();
+        manipulation = secondButton.getText();
 
-      specHelper.times(27, function() {
-        input.getElm().sendKeys(protractor.Key.BACK_SPACE);
-      });
-      specHelper.times(11, function() {
-        input.getElm().sendKeys(protractor.Key.ARROW_LEFT);
-      });
-      specHelper.times(6, function() {
-        input.getElm().sendKeys(protractor.Key.DELETE);
-      });
-      expect(kachelei.manipulateButtons().get(0).getText()).toBe(manipulation);
-    });
+        specHelper.times(27, function() {
+          input.getElm().sendKeys(protractor.Key.BACK_SPACE);
+        });
+        specHelper.times(11, function() {
+          input.getElm().sendKeys(protractor.Key.ARROW_LEFT);
+        });
+        specHelper.times(6, function() {
+          input.getElm().sendKeys(protractor.Key.DELETE);
+        });
+        expect(
+          kachelei.manipulateButtons().get(0).getText()
+        ).toBe(manipulation);
+      }
+    );
 
     it('should keep existing elements present while adding others', function() {
       var manipulation;

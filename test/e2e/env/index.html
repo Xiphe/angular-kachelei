@@ -3,7 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>My angular demo</title>
-    <!-- [[src/less]] -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- injector:scss -->
+    <!-- endinjector -->
+    <!-- injector:less -->
+    <link rel="stylesheet" href="/src/less/animate-basic.css">
+    <link rel="stylesheet" href="/src/less/animate-horizontal.css">
+    <link rel="stylesheet" href="/src/less/animate-scale.css">
+    <link rel="stylesheet" href="/src/less/animate-vertical.css">
+    <!-- endinjector -->
     <link rel="stylesheet" type="text/css" href="demo/style.css">
   </head>
   <body ng-cloak ng-app="demoApp">
@@ -14,7 +23,20 @@
         <button test-manipulation ng-click="manipulate()">manipulate</button>
       </div>
     </div>
-    <!-- [[src/js]] -->
+    <!-- bower:js -->
+    <script src="../../../bower_components/angular/angular.js"></script>
+    <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+    <!-- endbower -->
+    <!-- injector:js -->
+    <script src="/instrumented/src/js/helper.module.js"></script>
+    <script src="/instrumented/src/js/constant.config.js"></script>
+    <script src="/instrumented/src/js/directive.kachel.js"></script>
+    <script src="/instrumented/src/js/directive.kachelei.js"></script>
+    <script src="/instrumented/src/js/factory.debounce.js"></script>
+    <script src="/instrumented/src/js/factory.placer.js"></script>
+    <script src="/instrumented/src/js/factory.rect.js"></script>
+    <script src="/ng_templates.js"></script>
+    <!-- endinjector -->
     <script type="text/javascript" src="demo/demoApp.js"></script>
   </body>
 </html>

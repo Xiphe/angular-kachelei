@@ -1,5 +1,7 @@
 /* global app */
 app.factory('kPlacer', function() {
+  'use strict';
+
   var kPlacer = {};
 
   kPlacer.find = function(matrix, width, height) {
@@ -15,28 +17,28 @@ app.factory('kPlacer', function() {
 
       if (typeof foundX === 'undefined') {
         skip = 0;
-        row++;
+        row += 1;
         continue;
       }
 
       if (kPlacer.fitsY(matrix, foundX, row, width, height)) {
         return [foundX, row];
       } else {
-        skip++;
+        skip += 1;
       }
     }
   };
 
   kPlacer.findX = function(row, width, skip) {
     var found;
-    for (var i = 0, l = row.length; i < l; i++) {
+    for (var i = 0, l = row.length; i < l; i += 1) {
       found = true;
-      for (var ii = 0; ii < width; ii++) {
+      for (var ii = 0; ii < width; ii += 1) {
         found = found && row[i + ii] === false;
       }
       if (found) {
         if (skip) {
-          skip--;
+          skip -= 1;
         } else {
           return i;
         }
@@ -50,12 +52,12 @@ app.factory('kPlacer', function() {
     }
 
     var fits = true;
-    for (var i = 0; i < height; i++) {
+    for (var i = 0; i < height; i += 1) {
       if (typeof matrix[y + i] === 'undefined') {
         return true;
       }
 
-      for (var ii = 0; ii < width; ii++) {
+      for (var ii = 0; ii < width; ii += 1) {
         fits = fits && !matrix[y + i][x + ii];
       }
       if (!fits) {
@@ -68,19 +70,19 @@ app.factory('kPlacer', function() {
 
   kPlacer.newRow = function(size) {
     var line = [];
-    for (var i = 0; i < size; i++) {
+    for (var i = 0; i < size; i += 1) {
       line.push(false);
     }
     return line;
   };
 
   kPlacer.mark = function(matrix, x, y, width, height, countX) {
-    for (var i = 0; i < height; i++) {
+    for (var i = 0; i < height; i += 1) {
       if (typeof matrix[y + i] === 'undefined') {
         matrix.push(kPlacer.newRow(countX));
       }
 
-      for (var ii = 0; ii < width; ii++) {
+      for (var ii = 0; ii < width; ii += 1) {
         matrix[y + i][x + ii] = true;
       }
     }

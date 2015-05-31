@@ -1,4 +1,6 @@
 describe('placer', function() {
+  'use strict';
+
   var kPlacer;
 
   beforeEach(function() {

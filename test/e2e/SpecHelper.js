@@ -1,3 +1,5 @@
+'use strict';
+
 var port = process.env.E2E_SANDBOX_PORT || 8765;
 var sandboxUrl = 'http://localhost:' + port + '/';
 
@@ -27,7 +29,7 @@ exports.thingsStringInput = {
 };
 
 exports.times = function(count, cb) {
-  for (var i = 0; i < count; i++) {
+  for (var i = 0; i < count; i += 1) {
     cb();
   }
 };

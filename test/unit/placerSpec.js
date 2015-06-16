@@ -48,15 +48,28 @@ describe('placer', function() {
     });
 
     it('should return true if it fits', function() {
-      expect(kPlacer.fitsY([[false, false], [true, false]], 1, 0, 1, 2)).toBe(true);
+      expect(kPlacer.fitsY([
+        [false, false],
+        [true, false]],
+        1, 0, 1, 2
+      )).toBe(true);
     });
 
     it('should return true if it does not fit', function() {
-      expect(kPlacer.fitsY([[false, false], [true, true]], 1, 0, 1, 2)).toBe(false);
+      expect(kPlacer.fitsY([
+        [false, false],
+        [true, true]],
+        1, 0, 1, 2
+      )).toBe(false);
     });
 
     it('should return true if it fits wich offset', function() {
-      expect(kPlacer.fitsY([[true, true], [false, false], [true, false]], 1, 1, 1, 2)).toBe(true);
+      expect(kPlacer.fitsY([
+        [true, true],
+        [false, false],
+        [true, false]],
+        1, 1, 1, 2
+      )).toBe(true);
     });
 
     it('should check if a bigger kachel fits', function() {
@@ -95,14 +108,16 @@ describe('placer', function() {
       ], 1, 1)).toEqual([1, 0]);
     });
 
-    it('should return coordinates of the first place in a second row', function() {
+    it('should return coordinates of the first ' +
+    'place in a second row', function() {
       expect(kPlacer.find([
         [true, true],
         [true, false]
       ], 1, 1)).toEqual([1, 1]);
     });
 
-    it('should return coordinates of the first place in a second row with y2', function() {
+    it('should return coordinates of the first ' +
+    'place in a second row with y2', function() {
       expect(kPlacer.find([
         [true, true],
         [false, false],
@@ -110,7 +125,8 @@ describe('placer', function() {
       ], 1, 2)).toEqual([1, 1]);
     });
 
-    it('should return coordinates of the first place in a second row with y2 and x3', function() {
+    it('should return coordinates of the first place ' +
+    'in a second row with y2 and x3', function() {
       expect(kPlacer.find([
         [false, true, false, false, true],
         [false, false, false, false, false],

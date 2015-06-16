@@ -63,6 +63,8 @@ angular.module('demoApp', ['kachelei', 'ngAnimate']).run(function($rootScope) {
   maxWidth: 250,
   gap: 20
 }).directive('testManipulation', function() {
+  'use strict';
+
   return {
     restrict: 'A',
     controller: function($scope, $element) {

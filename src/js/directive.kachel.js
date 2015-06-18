@@ -4,6 +4,7 @@ app.directive('kachel', function() {
 
   return {
     restrict: 'A',
+    priority: 200,
     require: '^kachelei',
     link: function(scope, element, attrs, kachelei) {
       if (!attrs.ngRepeat) {

@@ -91,6 +91,7 @@ app.directive('kachelei', function(
 
         });
 
+        $scope.$broadcast('kLayout');
       };
 
       var debouncedLayout = kDebounce(layout, 0);

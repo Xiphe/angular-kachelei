@@ -4,10 +4,6 @@ app.directive('kachel', function() {
 
   return {
     restrict: 'A',
-    scope: {
-      x: '=kx',
-      y: '=ky'
-    },
     require: '^kachelei',
     link: function(scope, element, attrs, kachelei) {
       if (!attrs.ngRepeat) {
@@ -23,8 +19,8 @@ app.directive('kachel', function() {
       var kachel = {
         element: element,
         dimensions: {
-          x: scope.x,
-          y: scope.y
+          x: scope.$eval(attrs.kx || 1),
+          y: scope.$eval(attrs.ky || 1)
         }
       };
 

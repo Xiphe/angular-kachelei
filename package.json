@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/Xiphe/angular-kachelei.git"
   },
-  "main": "Gruntfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "grunt test",
     "install": "bower install"

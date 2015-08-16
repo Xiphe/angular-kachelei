@@ -8,8 +8,9 @@ env:
   - KARMA_REPORTERS=spec
 install:
 - npm install
+- bower install
 before_script:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 after_success:
-  - grunt coveralls
+  # - grunt coveralls

@@ -25,7 +25,7 @@ app.directive('kachel', function() {
         }
       };
 
-      kachelei.add(kachel, scope.$parent.$index);
+      kachelei.add(kachel, scope.$index);
       scope.$on('$destroy', function() {
         kachelei.remove(kachel);
       });
